@@ -77,12 +77,13 @@ namespace Discount.Api.Repositories
 
             var affected = await connection.ExecuteAsync
                 (
-                "UPDATE Coupon SET ProductName=@ProductName, Description=@Description,Amount=@Amount"
+                "UPDATE Coupon SET ProductName=@ProductName, Description=@Description,Amount=@Amount where id=@CouponId"
                 , new
                 {
                     ProductName = coupon.ProductName,
                     Description = coupon.Description,
-                    Amount = coupon.Amount
+                    Amount = coupon.Amount,
+                    CouponId = coupon.Id
                 }
                 );
 
