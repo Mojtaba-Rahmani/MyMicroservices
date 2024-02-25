@@ -34,21 +34,29 @@ namespace Discount.Api.Extension
                     {
                         Connection = connection,
                     };
+
+                   
+
                     command.CommandText = "Drop Table If Exists Coupon";
                     command.ExecuteNonQuery();
 
-                    command.CommandText = @"Create Table Coupon(Id Seryal Primary Key,
-                                                                PrudoctName Varchar(200) Not Null,
-                                                                Description Text,
-                                                                Amount Int)";
+                    command.CommandText = @"CREATE TABLE Coupon(Id SERIAL PRIMARY KEY,
+                                                                ProductName VARCHAR(200) NOT NULL,
+                                                                Description TEXT,
+                                                                Amount INT)";
+
+
+
+
+
                     command.ExecuteNonQuery();
 
                     // seed data
 
-                    command.CommandText = "Insert Into Coupon(PrudoctName,Description,Amount) Values('IPhone x1','Iphone discount',150)";
+                    command.CommandText = "Insert Into Coupon(ProductName,Description,Amount) Values('IPhone x1','Iphone discount',150)";
                     command.ExecuteNonQuery();
 
-                    command.CommandText = "Insert Into Coupon(PrudoctName,Description,Amount) Values('Sumsung 10','Sumsung discount',250)";
+                    command.CommandText = "Insert Into Coupon(ProductName,Description,Amount) Values('Sumsung 10','Sumsung discount',250)";
                     command.ExecuteNonQuery();
 
                     logger.LogInformation("migration has been complated");
