@@ -12,7 +12,7 @@ builder.Services.AddGrpc();
 
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 
-
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
