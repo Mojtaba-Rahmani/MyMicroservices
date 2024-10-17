@@ -1,6 +1,6 @@
 <h1> Microservice in .NET Core </h1>
 <br>
-<h3> Sample of #Microservices </h3>
+<h3> Sample of Microservices </h3>
 <br>
 <p>
 As companies grow, the development of web-based software can become challenging and can even hinder their growth. Using a principled and tested architecture, such as Microservices, can significantly improve a company's progress and development.
